@@ -22,14 +22,13 @@ export const ADD_USER = gql`
         email
         password
         savedBooks {
-            bookId
-            authors
-            description
-            title
-            image
-            link
+          bookId
+          authors
+          description
+          title
+          image
+          link
         }   
-        }
       }
     }
   }
@@ -37,44 +36,44 @@ export const ADD_USER = gql`
 
 export const SAVE_BOOK = gql`
     mutation saveBook($bookId: ID!, $authors: [String], $description: String!, $title: String!, $image: String, $link: String ) {
-        saveBook(bookId: $bookId, authors: $authors, description: $description, title: $title, image:$image, link: $link) {
-            token
-            user {
-                _id
-                username
-                email
-                password
-                savedBooks {
-                    bookId
-                    authors
-                    description
-                    title
-                    image
-                    link
-                }
-            }
+      saveBook(bookId: $bookId, authors: $authors, description: $description, title: $title, image:$image, link: $link) {
+        token
+        user {
+          _id
+          username
+          email
+          password
+          savedBooks {
+            bookId
+            authors
+            description
+            title
+            image
+            link
+          }
         }
+      }
     }
 `;
 
 export const REMOVE_BOOK = gql`
-    mutation removeBook($bookId: ID!) {
-        removeBook(bookId: $bookId ) {
-            token
-            user {
-                _id
-                username
-                email
-                password
-                savedBooks {
-                    bookId
-                    authors
-                    description
-                    title
-                    image
-                    link
-                }       
-            }
-        }
-    }        
+  mutation removeBook($bookId: ID!) {
+      removeBook(bookId: $bookId ) {
+          token
+          user {
+              _id
+              username
+              email
+              password
+              savedBooks {
+                  bookId
+                  authors
+                  description
+                  title
+                  image
+                  link
+              }       
+          }
+    }
+  }        
 `;
