@@ -41,7 +41,7 @@ Simply click the URL login and search for a book which you want to save to your 
 # Screenshots
 <p>Demonstration</p>
 
-![J.A.T.E](./assets/screenshots/JATE-function.gif)
+![Book Search](./assets/img/booksearch.gif)
 
 
 
